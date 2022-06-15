@@ -2,6 +2,7 @@ const express = require('express')
 const PORT = 4000
 const app = express()
 const cors = require('cors')
+const session = require('express-session');
 
 require('../Project_2/config/database') //to get Mongoose connected you have to require then put the path
 const cookieParser = require('cookie-parser')
@@ -10,7 +11,7 @@ const affirRouter = require('../Project_2/routes/affirRoutes')
 const path = require('path')
 const methodOverride = require('method-override')
 
-const session = require('express-session');
+
 const passport = require ('passport');
 
 // const createError = require('http-error')
@@ -29,18 +30,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //middleware 
 app.use(methodOverride('_method'))
-app.use('../', userRouter) 
-app.use('../affirmations',affirRouter)
+app.use('/', userRouter) 
+app.use('/affirmations',affirRouter)
 
 app.use(session ({
-    secret: 'SEIRocks!',
+    secret: 'PositiveVibes',
     resave: false, 
     saveUninitialized: true
   }))
   
   // app.use(session({... code above
-  app.use(passport.initialize());
-  app.use(passport.session());
+app.use(passport.initialize());
+app.use(passport.session());
   
   
 

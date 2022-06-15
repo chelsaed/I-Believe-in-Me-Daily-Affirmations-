@@ -20,8 +20,8 @@ function show(req, res) {
 }
 
 function newAffir(req, res) {
-  res.render('affirmations/new', {affirmation})
-
+  res.render('affirPage')
+}
 
 // function create(req, res) {
 //   // convert nowShowing's checkbox of nothing or "on" to boolean
@@ -41,4 +41,3 @@ function newAffir(req, res) {
 //     // for now, redirect right back to new.ejs
 //     res.redirect('/movies');
 //   });
-}
