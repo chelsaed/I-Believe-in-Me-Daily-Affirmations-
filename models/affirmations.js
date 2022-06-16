@@ -7,13 +7,11 @@ const affirSchema = new mongoose.Schema({
     required: true
   },
   feelings: {
-    type: Number,
-    enum: [1, 2, 3, 4, 5],
+    type: String,
   },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true
+    ref: 'User'
   }
 }, {
   timestamps: true

@@ -10,7 +10,7 @@ const userRouter = require('../Project_2/routes/userRoutes')
 const affirRouter = require('../Project_2/routes/affirRoutes')
 const path = require('path')
 const methodOverride = require('method-override')
-
+const emoji = require('node-emoji')
 
 const passport = require ('passport');
 
