@@ -5,6 +5,8 @@
   }
   
   body {
+    background: url(https://cdn.pixabay.com/photo/2016/05/10/21/50/meditation-1384758_1280.jpg);
+    background-size:cover; 
     margin: 0;
     height: 100vh;
     display: grid;
@@ -12,9 +14,12 @@
     grid-template-areas:
       "nav"
       "main"
-  }
+    
+ }
   
   body > nav {
+    background: url(https://cdn.pixabay.com/photo/2016/05/10/21/50/meditation-1384758_1280.jpg);
+    background-size:cover; 
     grid-area: nav;
     background-color: #B8C0C2;
     display: flex;

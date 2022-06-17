@@ -8,6 +8,7 @@ require('../Project_2/config/database') //to get Mongoose connected you have to 
 const cookieParser = require('cookie-parser')
 const userRouter = require('../Project_2/routes/userRoutes')
 const affirRouter = require('../Project_2/routes/affirRoutes')
+const index = require('../Project_2/routes/index.js')
 const path = require('path')
 const methodOverride = require('method-override')
 const emoji = require('node-emoji')
@@ -43,6 +44,8 @@ app.use(session ({
 app.use(passport.initialize());
 app.use(passport.session());
   
+app.use('/', index);
+app.use('/', affirRouter);
   
 
 //error handler 
