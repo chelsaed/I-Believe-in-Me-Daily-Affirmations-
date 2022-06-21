@@ -15,7 +15,7 @@ function index(req, res) {
 
 function show(req, res) {
   Affir.findById(req.params.id, function(err, affirmation) {
-    res.render('affirmations/show', {affirmation});
+    res.render('affirPage', {affirmation});
   });
 }
 

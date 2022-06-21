@@ -3,10 +3,11 @@ const PORT = 4000
 const app = express()
 const cors = require('cors')
 const session = require('express-session');
+require('dotenv').config()
+
 
 require('../Project_2/config/database') //to get Mongoose connected you have to require then put the path
 const cookieParser = require('cookie-parser')
-const userRouter = require('../Project_2/routes/userRoutes')
 const affirRouter = require('../Project_2/routes/affirRoutes')
 const index = require('../Project_2/routes/index.js')
 const path = require('path')
@@ -31,7 +32,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //middleware 
 app.use(methodOverride('_method'))
-app.use('/', userRouter) 
 app.use('/affirmations',affirRouter)
 
 app.use(session ({
