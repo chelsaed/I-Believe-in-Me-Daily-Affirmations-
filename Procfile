@@ -1,1 +1,1 @@
-web: node src/my-daily-affirmations.js
+web: node server.js

@@ -6,10 +6,10 @@ const session = require('express-session');
 require('dotenv').config()
 
 
-require('../Project_2/config/database') //to get Mongoose connected you have to require then put the path
+require('./config/database') //to get Mongoose connected you have to require then put the path
 const cookieParser = require('cookie-parser')
-const affirRouter = require('../Project_2/routes/affirRoutes')
-const index = require('../Project_2/routes/index.js')
+const affirRouter = require('./routes/affirRoutes')
+const index = require('./routes/index.js')
 const path = require('path')
 const methodOverride = require('method-override')
 const emoji = require('node-emoji')
