@@ -6,7 +6,7 @@ const passport = require('passport');
 
 // The root route renders our only view
 router.get('/', (req, res) => {
-  res.send(affirPage.ejs);
+  res.send('/affirRoutes');
 });
 
 // router.get('auth/google', 
