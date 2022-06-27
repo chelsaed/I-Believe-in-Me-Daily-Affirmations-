@@ -23,20 +23,20 @@ router.get('/protected', (req, res) => {
   res.send('Hello!');
 });
 
-// // Google OAuth login route
-// router.get('/auth/google', passport.authenticate(
-//   'google',
-//   { scope: ['profile', 'email'] }
-// ));
+// Google OAuth login route
+router.get('/auth/google', passport.authenticate(
+  'google',
+  { scope: ['profile', 'email'] }
+));
 
-// // Google OAuth callback route
-// router.get('/oauth2callback', passport.authenticate(
-//   'google',
-//   {
-//     successRedirect : '/protected',
-//     failureRedirect : '/auth/failure'
-//   }
-// ));
+// Google OAuth callback route
+router.get('/oauth2callback', passport.authenticate(
+  'google',
+  {
+    successRedirect : '/protected',
+    failureRedirect : '/auth/failure'
+  }
+));
 
 // OAuth logout route
 router.get('/logout', function(req, res){
