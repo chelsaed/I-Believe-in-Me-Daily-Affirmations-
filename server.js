@@ -52,8 +52,8 @@ app.use('/', affirRouter);
 // app.use(function(req, res, next) {
 //     next(createError(404));
 //   });
-app.listen(process.env.PORT)
 
-app.listen(PORT, () =>{
+
+app.listen(process.env.PORT, () =>{
     console.log(`✅ PORT: ${PORT} 🌟`);
 })
