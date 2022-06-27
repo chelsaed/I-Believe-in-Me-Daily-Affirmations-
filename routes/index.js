@@ -5,7 +5,7 @@ const passport = require('passport');
 
 // The root route renders our only view
 router.get('/', (req, res) => {
-  res.send('/affirmations');
+  res.send('/');
 });
 
 router.get('auth/google', 
