@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //middleware 
 app.use(methodOverride('_method'))
-app.use('/affirmations',affirRouter)
+
 
 app.use(session ({
     secret: 'PositiveVibes',
@@ -45,7 +45,7 @@ app.use(passport.initialize());
 app.use(passport.session());
   
 app.use('/', index);
-app.use('/', affirRouter);
+app.use('/affirmations',affirRouter)
   
 
 //error handler 
