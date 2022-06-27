@@ -1,11 +1,12 @@
 const router = require('express').Router();
 const passport = require('passport');
+const affirCtrl = require('../controller/affirCtrl');
 
 
 
 // The root route renders our only view
 router.get('/', (req, res) => {
-  res.send('/');
+  res.send('/', affirCtrl);
 });
 
 router.get('auth/google', 
