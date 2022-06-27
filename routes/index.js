@@ -6,7 +6,7 @@ const affirCtrl = require('../controller/affirCtrl');
 
 // The root route renders our only view
 router.get('/', (req, res) => {
-  res.send('/', affirCtrl);
+  res.send(affirPage.ejs);
 });
 
 router.get('auth/google', 
