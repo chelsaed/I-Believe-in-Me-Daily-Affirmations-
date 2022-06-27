@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const passport = require('passport');
-const affirCtrl = require('../controller/affirCtrl');
+// const affirCtrl = require('../controller/affirCtrl');
 
 
 
@@ -9,40 +9,40 @@ router.get('/', (req, res) => {
   res.send(affirPage.ejs);
 });
 
-router.get('auth/google', 
-  passport.authenticate('google', {scope: ['email', 'profile']})
-);
+// router.get('auth/google', 
+//   passport.authenticate('google', {scope: ['email', 'profile']})
+// );
 
-router.get('/google/callback', 
-  passport.authenticate('google', {
-    successRedirect : '/protected',
-    failureRedirect : '/auth/failure',
-  })
-);
+// router.get('/google/callback', 
+//   passport.authenticate('google', {
+//     successRedirect : '/protected',
+//     failureRedirect : '/auth/failure',
+//   })
+// );
 
-router.get('/protected', (req, res) => {
-  res.send('Hello!');
-});
+// router.get('/protected', (req, res) => {
+//   res.send('Hello!');
+// });
 
-// Google OAuth login route
-router.get('/auth/google', passport.authenticate(
-  'google',
-  { scope: ['profile', 'email'] }
-));
+// // Google OAuth login route
+// router.get('/auth/google', passport.authenticate(
+//   'google',
+//   { scope: ['profile', 'email'] }
+// ));
 
-// Google OAuth callback route
-router.get('/oauth2callback', passport.authenticate(
-  'google',
-  {
-    successRedirect : '/protected',
-    failureRedirect : '/auth/failure'
-  }
-));
+// // Google OAuth callback route
+// router.get('/oauth2callback', passport.authenticate(
+//   'google',
+//   {
+//     successRedirect : '/protected',
+//     failureRedirect : '/auth/failure'
+//   }
+// ));
 
-// OAuth logout route
-router.get('/logout', function(req, res){
-  req.logout();
-  res.redirect('/affirmations');
-});
+// // OAuth logout route
+// router.get('/logout', function(req, res){
+//   req.logout();
+//   res.redirect('/affirmations');
+// });
 
 module.exports = router;
